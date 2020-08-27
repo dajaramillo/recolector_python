@@ -20,6 +20,8 @@ def leer_problem(collection):
     contForoResponse = 0
     contForocomment = 0
     contIngresos = 0
+
+    # vector para guardar los datos extraídos
     datos = []
     #ruta al archivo tracking.log
     ruta = r'D:\Nueva carpeta\tracking5julio.log'
@@ -36,6 +38,7 @@ def leer_problem(collection):
                 dat = dato(
                     linea["username"],
                     linea["name"],
+                    linea["time"],
                     linea["time"].split("T")[0],
                     linea["time"].split("T")[1].split(".")[0],
                     linea["page"],
@@ -74,6 +77,7 @@ def leer_problem(collection):
                 dat2 = dato(
                     linea["username"],
                     linea["name"],
+                    linea["time"],
                     linea["time"].split("T")[0],
                     linea["time"].split("T")[1].split(".")[0],
                     linea["page"],
@@ -112,6 +116,7 @@ def leer_problem(collection):
                 dat3 = dato(
                     linea["username"],
                     "nav_content",
+                    linea["time"],
                     linea["time"].split("T")[0],
                     linea["time"].split("T")[1].split(".")[0],
                     linea["page"],
@@ -154,6 +159,7 @@ def leer_problem(collection):
                     dat4 = dato(
                         linea["username"],
                         "nav_content_click",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["page"],
@@ -226,6 +232,7 @@ def leer_problem(collection):
                     dat5 = dato(
                         linea["username"],
                         "nav_content_next",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["page"],
@@ -268,6 +275,7 @@ def leer_problem(collection):
                     dat6 = dato(
                         linea["username"],
                         "nav_content_prev",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["page"],
@@ -310,6 +318,7 @@ def leer_problem(collection):
                     dat7 = dato(
                         linea["username"],
                         "nav_content_tab",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["page"],
@@ -352,6 +361,7 @@ def leer_problem(collection):
                     dat8 = dato(
                         linea["username"],
                         "nav_content_next",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["page"],
@@ -422,6 +432,7 @@ def leer_problem(collection):
                     dat9 = dato(
                         linea["username"],
                         "nav_content_prev",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["page"],
@@ -497,6 +508,7 @@ def leer_problem(collection):
                     dat10 = dato(
                         linea["username"],
                         "play_video",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["event"]["currentTime"],
@@ -547,6 +559,7 @@ def leer_problem(collection):
                     dat11 = dato(
                         linea["username"],
                         "pause_video",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["page"].split("?")[0],
@@ -597,6 +610,7 @@ def leer_problem(collection):
                     dat12 = dato(
                         linea["username"],
                         "stop_video",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["event"]["currentTime"],
@@ -642,6 +656,7 @@ def leer_problem(collection):
                         dat13 = dato(
                         linea["username"],
                         "edx.forum.thread.created",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["event"]["commentable_id"],
@@ -657,6 +672,7 @@ def leer_problem(collection):
                         dat13 = dato(
                         linea["username"],
                         "edx.forum.thread.created",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["event"]["commentable_id"],
@@ -704,6 +720,7 @@ def leer_problem(collection):
                         dat14 = dato(
                             linea["username"],
                             "edx.forum.response.created",
+                            linea["time"],
                             linea["time"].split("T")[0],
                             linea["time"].split("T")[1].split(".")[0],
                             linea["referer"].split("?")[0],
@@ -719,6 +736,7 @@ def leer_problem(collection):
                         dat14 = dato(
                         linea["username"],
                         "edx.forum.response.created",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["event"]["commentable_id"],
@@ -766,6 +784,7 @@ def leer_problem(collection):
                         dat15 = dato(
                             linea["username"],
                             "edx.forum.comment.created",
+                            linea["time"],
                             linea["time"].split("T")[0],
                             linea["time"].split("T")[1].split(".")[0],
                             linea["referer"].split("?")[0],
@@ -781,6 +800,7 @@ def leer_problem(collection):
                         dat15 = dato(
                         linea["username"],
                         "edx.forum.comment.created",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         linea["event"]["commentable_id"],
@@ -830,6 +850,7 @@ def leer_problem(collection):
                     dat16 = dato(
                         linea["username"],
                         "Signin",
+                        linea["time"],
                         linea["time"].split("T")[0],
                         linea["time"].split("T")[1].split(".")[0],
                         "NULL",
