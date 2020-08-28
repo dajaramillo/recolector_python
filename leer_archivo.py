@@ -173,13 +173,16 @@ def leer_problem(collection):
                     
                     time = dat4.time
                     timeSring = ""+time[0]+time[1]+time[2]+time[3]+time[4]+time[5]+time[6]+time[7]
+                    
                     section = busqueda_contenidos(dat4.username,dat4.date,timeSring,dat4.session)
                     if "Sin Coincidencia" in section:
                         timeSring = ""+time[0]+time[1]+time[2]+time[3]+time[4]+time[5]+(time[6])
                         section = busqueda_contenidos(dat4.username,dat4.date,timeSring,dat4.session)
+                        
                     if "Sin Coincidencia" in section:
                         timeSring = ""+time[0]+time[1]+time[2]+time[3]+(time[4])
                         section = busqueda_contenidos(dat4.username,dat4.date,timeSring,dat4.session)
+                        
                     if "Sin Coincidencia" in section:
                         timeSring = ""+time[0]+time[1]+time[2]+time[3]+str(int(time[4])+1)
                         section = busqueda_contenidos(dat4.username,dat4.date,timeSring,dat4.session)
@@ -831,7 +834,7 @@ def leer_problem(collection):
             if '"referer": "http://selene.unicauca.edu.co/dashboard"' in linea:
                 
                 #print("INGRESOS")
-                print(linea)
+                #print(linea)
                 
                     #Se convierte en JSON
                 linea = linea.replace('"{', '{', 1)
@@ -842,7 +845,7 @@ def leer_problem(collection):
                     #print(linea)
                 linea = json.loads(linea)
                 if 'course' in linea["event_type"]:
-                    print(linea["event_type"])
+                    #print(linea["event_type"])
                     validar = linea["event_type"].split("/")[3]
                 
                 if 'course' in validar:
