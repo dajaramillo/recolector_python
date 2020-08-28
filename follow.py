@@ -15,7 +15,7 @@ collection = db.registros
 
 #Se crea lista de todos los registros problem_check del tracking.log
 #Realiza toda la extracción de los datos y los deja listos para guardarlo en MongoDB
-#####YES
+#
 datos = leer_problem(collection)
 
 
